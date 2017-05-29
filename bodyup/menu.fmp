@@ -1,0 +1,38 @@
+<TEMPLATE APPNAME="123FLASHMENU" VER_NUMBER="2" VER_LOWNUMBER="2" TYPE="2" SWF_NAME="macro-style" SUB_LEVEL="2" CATALOG="2" SWF_SHOWNAME="macro-style" WIDTH="800" HEIGHT="65" BGCOLOR="0x8B8272" FLASHBGCOLOR="0x8B8272" TRANSPARENT="false">
+	<GROUP_ATTRIBUTE>
+		<PARAM ID="1" DF_VALUE="new item"/>
+		<PARAM ID="2" DF_VALUE=""/>
+		<PARAM ID="3" DF_VALUE="_blank,_parent,_self,_top"/>
+	</GROUP_ATTRIBUTE>
+	<GROUP_MENU>
+		<PARAM ID="360" DF_VALUE="Tahoma"/>
+		<PARAM ID="361" DF_VALUE="14"/>
+		<PARAM ID="362" DF_VALUE="clBlack"/>
+		<PARAM ID="363" DF_VALUE="Bold,Plain,Italic,Bold-Italic"/>
+		<PARAM ID="364" DF_VALUE="4"/>
+		<PARAM ID="365" DF_VALUE="clBlack"/>
+		<PARAM ID="366" DF_VALUE="40"/>
+		<PARAM ID="367" DF_VALUE="Tahoma"/>
+		<PARAM ID="368" DF_VALUE="14"/>
+		<PARAM ID="369" DF_VALUE="clWhite"/>
+		<PARAM ID="370" DF_VALUE="Bold,Plain,Italic,Bold-Italic"/>
+		<PARAM ID="371" DF_VALUE="clBlack"/>
+		<PARAM ID="372" DF_VALUE="50"/>
+		<PARAM ID="373" DF_VALUE="$00187E56"/>
+		<PARAM ID="374" DF_VALUE="800"/>
+		<PARAM ID="375" DF_VALUE="$00187E56"/>
+		<PARAM ID="137" DF_VALUE="false"/>
+		<PARAM ID="150" DF_VALUE=""/>
+	</GROUP_MENU>
+	<GROUP_SIZE>
+		<PARAM ID="140" DF_VALUE="800"/>
+		<PARAM ID="141" DF_VALUE="65"/>
+	</GROUP_SIZE>
+	<GROUP_PAGE>
+		<PARAM ID="143" DF_VALUE="0x8B8272"/>
+		<PARAM ID="144" DF_VALUE="0x8B8272"/>
+		<PARAM ID="145" DF_VALUE="false"/>
+	</GROUP_PAGE>
+	<MENU>
+		<item name="Home" url="home.html" callback="onClick"/><item name="Institucional" callback="onClick"><item name="Apresentação" url="Apresentacao.html" callback="onClick"/></item><item name="Atividades" callback="onClick"><item name="Musculação" url="Musculacao.html" callback="onClick"/><item name="Natação" url="Natacao.html" callback="onClick"/><item name="Spinning" url="Spinning.html" callback="onClick"/><item name="Hidroginástica" url="Hidroginastica.html" callback="onClick"/><item name="Yoga" url="Yoga.html" callback="onClick"/><item name="Pilates" url="Pilates.html" callback="onClick"/><item name="Judô" url="Judo.html" callback="onClick"/><item name="Capoeira" url="Capoeira.html" callback="onClick"/></item><item name="Eventos" callback="onClick"><item name="Galeria de Fotos" url="Galeria.html" callback="onClick"/></item><item name="Contato" url="Contato.html" callback="onClick"/><item name="Login" url="Login.html" callback="onClick"/></MENU>
+</TEMPLATE>

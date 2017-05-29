@@ -1,0 +1,279 @@
+﻿body
+{
+	margin: 0px;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: gray;
+	background-color: #c8c8c8;
+}
+
+img
+{
+	border-style: none;
+}
+
+div#top
+{
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	width: 100%;
+	background-color: #7697bf;
+	font-size: 12px;
+	color: #ededed;
+}
+
+div.insideTop
+{
+	text-align: left;
+	width: 940px;
+	margin: 0px auto;
+	font-weight: bold;
+	padding: 3px 0px 3px 0px;
+}
+
+div.insideTop a, div.subMenuVisible a, div.subMenuInvisible a
+{
+	text-decoration: none;
+	color: white;
+}
+
+div.subMenuVisible
+{
+	text-align: left;
+	width: 940px;
+	margin: 0px auto;
+	padding: 3px 0px 3px 0px;
+}
+
+div.subMenuInvisible
+{
+	text-align: left;
+	width: 940px;
+	margin: 0px auto;
+	padding: 3px 0px 3px 0px;
+	display: none;
+}
+
+div#titulo2
+{
+	padding: 5px 0px 5px 0px;
+	font-size: 12px;
+	color: #735a44;
+	margin: 0px auto;
+	width: 940px;
+}
+
+div#middle
+{
+	width: 960px;
+	margin: 0px auto;
+	background-color: #ededed;
+	border-left: solid 1px #7697bf;
+	border-right: solid 1px #7697bf;
+}
+
+div#col1_1, div.col1_1
+{
+	width: 930px;
+	padding: 10px;
+}
+
+div#col2_1, div#col2_2,
+div.col2_1, div.col2_2
+{
+	float: left;
+	width: 460px;
+	padding: 10px;
+}
+
+div.col3_1, div.col3_2, div.col3_3,
+div#col3_1, div#col3_2, div#col3_3
+{
+	float: left;
+	width: 295px;
+	padding: 10px;
+}
+
+div#col4_1, div#col4_2, div#col4_3, div#col4_4,
+div.col4_1, div.col4_2, div.col4_3, div.col4_4
+{
+	float: left;
+	width: 217px;
+	padding: 10px;
+}
+
+div.wrapper
+{
+	width: 100%;
+	clear: both;
+}
+
+div#bottom
+{
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	width: 100%;
+	background-color: #7697bf;
+	font-size: 12px;
+	color: #ededed;
+}
+
+div.window1
+{
+	width: 100%;
+	background-color: lightgray;
+}
+
+div.window2
+{
+	width: 450px;
+	background-color: lightgray;
+}
+
+div.window3
+{
+	width: 295px;
+	background-color: lightgray;
+}
+
+div.windowtop
+{
+	width: 100%;
+	background-color: #9dbb61;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	border-top: solid 1px darkgray;
+	border-left: solid 1px darkgray;
+	border-right: solid 1px darkgray;
+	padding: 0px 5px 0px 5px;
+}
+
+div.windowbody
+{
+	position: relative;
+	width: 100%;
+	border: solid 1px darkgray;
+	padding: 5px;
+	text-align: left;
+	background-color: #ededed;
+}
+
+div.windowbottom
+{
+	width: 100%;
+	background-color: #9dbb61;
+	text-align: right;
+	font-size: 10px;
+	color: white;
+	border-bottom: solid 1px darkgray;
+	border-left: solid 1px darkgray;
+	border-right: solid 1px darkgray;
+	padding: 0px 5px 0px 5px;
+}
+
+.gridview
+{
+	border-width: 0px;
+}
+
+.emptydatarowstyle, .gridview caption
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: gray;
+	margin: 0px 0px 5px 0px;
+	text-align: left;
+}
+
+.headerstyle, .pagerstyle
+{
+	background-color: #004e9b;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.itemstyle, .headerstyle, .pagerstyle
+{
+	font-size: 12px;
+	border: solid 1px lightgray;
+}
+
+.pagerstyle td table tr,
+.pagerstyle td table tr td
+{
+	border: none;
+}
+
+.pagerstyle td table tr td a,
+.pagerstyle td table tr td a:hover,
+.pagerstyle td table tr td a:active,
+.pagerstyle td table tr td a:visited,
+.headerstyle a,
+.headerstyle a:hover,
+.headerstyle a:active,
+.headerstyle a:visited
+{
+	text-decoration: none;
+	color: #ededed;
+}
+
+.pagerstyle td table tr td span
+{
+	border: solid 1px #ededed;
+}
+
+.itemstyle
+{
+	color: gray;
+}
+
+.selecteditemstyle
+{
+	background-color: #bfdfff;
+}
+
+input[type="submit"], input[type="button"]
+{
+	border: solid 1px #004e9b;
+	color: #004e9b;
+	background-color: #bfdfff;
+}
+
+div.progressPanel
+{
+	position: absolute;
+	display: none;
+	z-index: 0; 
+	opacity: 0.8; 
+	-moz-opacity: 0.8; 
+	filter: alpha(opacity=80);
+	z-index: 999999;
+}
+
+div.botao
+{
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0px 0px 0px;
+}
+
+/* inicio do IE hack para o padding dos botões */
+*input[type="submit"],
+*input[type="button"],
+_input[type="submit"],
+_input[type="button"]
+{
+	overflow: visible;
+	padding: 0px 7px 0px 7px;
+}
+/* fim do IE hack para o padding dos botões */
+
+/* inicio da implementação do padding-bottom do fieldset para IE (todas as versões) */
+fieldset
+{
+	padding: 0px 0px 10px 0px;
+}
+/* fim da implementação do padding-bottom do fieldset para IE (todas as versões) */

@@ -1,0 +1,39 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000000 !important;
+}
+.banner {
+	width:800;
+	height:212;
+	border: none;
+}
+
+.largura {
+	width: 800px !important;
+}
+
+.style2 {
+	font-family: Tahoma;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.style3 {
+	color: #FFFFFF;
+	font-family: Tahoma;
+}
+
+.style6 {
+	font-family: Tahoma;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.style7 {
+	font-weight: bold;
+	background-color: white !important;
+}

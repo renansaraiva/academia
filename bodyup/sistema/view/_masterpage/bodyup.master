@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="bodyup.master.cs" Inherits="bodyup.bodyup" %>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+	<head>
+		<title>BodyUp - Intranet</title>
+		
+		<%= "<link rel='stylesheet' href='http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") + "/view/_style/bodyup.css' />"%>
+		<%= "<script language='javascript' type='text/javascript' src='http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + Request.ApplicationPath + "/view/_js/bodyup.js'></script>"%>
+		
+		<script type="text/javascript">
+			window.onload = go;
+			function go() {
+				Typecast.Init();
+			}
+		</script>
+		
+		<script language="javascript">
+		<!--
+			function MakeupProgressPanel(updateid, progressid) {
+				var update = $get(updateid);
+				var progress = $get(progressid);
+				progress.className = "progressPanel";
+			}
+
+			function OverlayProgressPanel(updateid, progressid) {
+				var update = $get(updateid);
+				var progress = $get(progressid);
+				progress.style.width = parseInt(update.offsetWidth) + "px";
+				progress.style.height = parseInt(update.offsetHeight) + "px";
+			}
+		//-->
+		</script>
+		
+		<asp:ContentPlaceHolder id="ContentPlaceHolderHead" runat="server"></asp:ContentPlaceHolder>
+	</head>
+
+	<body>
+		<form id="aspnetForm" runat="server">
+		
+			<div>
+				<asp:ScriptManager ID="ScriptManagerBody" runat="server" OnAsyncPostBackError="ScriptManagerBody_AsyncPostBackError"/>
+		        
+				<script type="text/javascript" language="javascript">
+				<!--
+        			Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+
+        			function EndRequestHandler(sender, args) {
+        				if (args.get_error() != undefined && args.get_error().httpStatusCode == '500') {
+        					alert(args.get_error().message);
+        					args.set_errorHandled(true);
+        				}
+
+        			}
+        		//-->
+				</script>
+				
+				<script type="text/javascript" language="javascript">
+				<!--
+					function switchMenu(id) {
+
+						var submenu;
+
+						for (i = 0; i <= 2; i++) {
+							submenu = document.getElementById("submenu" + i.toString());
+							submenu.className = "subMenuInvisible";
+						}
+
+						submenu = document.getElementById("submenu" + id.toString());
+						submenu.className = "subMenuVisible";
+
+						return true;
+					}			
+				//-->						
+				</script>
+				
+				<div id="top">
+					<div class="insideTop">
+						<a href="javascript: void" onclick="return switchMenu(1);">GERENCIAMENTO DE ALUNOS</a> |
+						<a href="javascript: void" onclick="return switchMenu(2);">RELATÓRIOS</a>
+					</div>
+					<div class="subMenuVisible" id="submenu0">&nbsp;</div>
+					<div class="subMenuInvisible" id="submenu1">
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/aluno/index.aspx", "_self");'>GERENCIAMENTO DE ALUNOS</a> | 
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/aluno/inserir.aspx", "_self");'>INSERÇÃO DE ALUNO</a>
+					</div>
+					<div class="subMenuInvisible" id="submenu2">
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/relatorio/index.aspx", "_self");'>RELATÓRIOS</a> | 
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/relatorio/aluno.aspx", "_self");'>LISTA DE ALUNOS</a> |
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/relatorio/alunoaniversario.aspx", "_self");'>LISTA DE ANIVERSARIANTES POR MÊS</a> | 
+						<a href="javascript: void" onclick='window.open("<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/relatorio/alunoatividade.aspx", "_self");'>LISTA DE ALUNOS POR ATIVIDADE</a>
+					</div>
+				</div>
+	            
+				<div id="middle">
+						
+					<asp:UpdateProgress ID="UpdateProgress1" runat="server">
+						<ProgressTemplate>
+							<table width="100%" height="100%" bgcolor="#FFFFFF">
+								<tr>
+									<td align="center" valign="middle">
+										<img src='<%= "http" + (Request.IsSecureConnection ? "s" : "") + "://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + (Request.ApplicationPath != "/" ? Request.ApplicationPath : "") %>/view/_image/ajax-loader.gif' align='absmiddle' />
+										Carregando...
+									</td>
+								</tr>
+							</table>
+						</ProgressTemplate>
+					</asp:UpdateProgress>
+		
+					<asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server" />
+					
+					<script language="javascript">
+					<!--
+						function initializeProgressPanel(updateid, progressid) {
+							MakeupProgressPanel(updateid, progressid);
+							OverlayProgressPanel(updateid, progressid);
+
+							function OverlayLoop() {
+								OverlayProgressPanel(updateid, progressid);
+							}
+
+							setInterval(OverlayLoop, 1000);
+						}
+
+						initializeProgressPanel('middle', '<%=UpdateProgress1.ClientID%>');
+					//-->
+					</script>
+					
+				</div>
+				
+				<div id="bottom">
+					Desenvolvido pelos alunos de IHC - Sistemas de Informação - 3. período 2010 - Universidade Estácio de Sá.
+				</div>
+				
+			</div>
+			
+		</form>
+	</body>
+</html>
